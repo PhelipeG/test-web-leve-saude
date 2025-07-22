@@ -47,8 +47,8 @@ A aplicação estará disponível em: `http://localhost:5173`
 ## 🔑 Credenciais de Teste
 
 Para testar a aplicação, você pode criar uma conta ou usar:
-- **Email:** luisphelipe1000@gmail.com
-- **Senha:** Motorola20
+- **Email:** [Criar conta no app]
+- **Senha:** [Criar conta no app]
 
 ## 📱 Scripts Disponíveis
 

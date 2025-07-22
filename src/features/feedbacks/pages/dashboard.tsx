@@ -66,7 +66,7 @@ export function DashboardPage() {
           <h1 className="text-2xl font-bold text-gray-800">FeedbackHub Dashboard</h1>
           <button
             onClick={handleLogout}
-            className="bg-red-500 text-white px-4 py-2 rounded-2xl hover:bg-red-600 transition"
+            className="bg-red-500 text-white px-8 py-2 rounded-2xl hover:bg-red-600 transition shadow-amber-700 shadow-sm"
           >
             Sair
           </button>
