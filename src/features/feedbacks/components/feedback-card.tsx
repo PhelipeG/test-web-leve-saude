@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 import { formatDate } from '@/shared/utils/formatDate';
 
 interface FeedbackCardProps {
@@ -13,13 +15,15 @@ export const FeedbackCard: React.FC<FeedbackCardProps> = ({
   comment,
   createdAt,
 }) => {
-  const renderStars = (rating: number) => {
-    return Array.from({ length: rating }, (_, index) => (
-      <span key={index} className={index < rating ? 'text-yellow-500' : 'text-gray-300'}>
-        ⭐
-      </span>
-    ));
-  };
+  const renderStars = useMemo(() => {
+    return (rating: number) => {
+      return Array.from({ length: rating }, (_, index) => (
+        <span key={index} className={index < rating ? 'text-yellow-500' : 'text-gray-300'}>
+          ⭐
+        </span>
+      ));
+    };
+  }, []);
 
   return (
     <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">

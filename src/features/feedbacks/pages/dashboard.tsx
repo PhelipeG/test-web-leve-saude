@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 
 import { auth } from '@/config/firebase';
 import { useAuth } from '@/shared/contexts/AuthContext';
+import { useDebounce } from '@/shared/hooks/useDebounce';
 
 import { FeedbackCard } from '../components/feedback-card';
 import { useFeedbacks } from '../hooks/useFeedback';
@@ -17,7 +18,9 @@ export function DashboardPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
-  const { feedbacks, loading } = useFeedbacks(orderBy, orderDirection, searchTerm);
+  const debounceSearchTerm = useDebounce({ value: searchTerm, delay: 500 });
+
+  const { feedbacks, loading } = useFeedbacks(orderBy, orderDirection, debounceSearchTerm);
 
   function handleLogout() {
     signOut(auth).then(() => {
@@ -69,7 +72,7 @@ export function DashboardPage() {
           </button>
         </div>
 
-        <p className="text-gray-600 mb-4">Bem-vindo, {user?.email} 👋</p>
+        <p className="text-gray-600 mb-4">Bem-vindo, {user?.email?.slice(0, 11)} 👋</p>
 
         {/* Busca */}
         <div className="mb-6">
