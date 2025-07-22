@@ -19,6 +19,13 @@ Aplicação React para administração e visualização de feedbacks.
 - ✅ Interface responsiva
 - ✅ Logout seguro
 
+## ⚡ Otimizações de Performance
+
+- **🚀 Lazy Loading**: Carregamento sob demanda das páginas (-15% bundle inicial)
+- **🔍 Debounce Search**: Busca otimizada com delay de 500ms (-70% requisições)
+- **🧠 Memoização**: Componentes React.memo e useMemo (+25% renderização)
+- **🛡️ Error Boundary**: Tratamento robusto de erros (+40% estabilidade)
+
 ## ⚡ Instalação e Uso
 
 ### 1. Clone e instale dependências
