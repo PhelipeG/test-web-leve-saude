@@ -23,7 +23,7 @@ Aplicação React para administração e visualização de feedbacks.
 
 ### 1. Clone e instale dependências
 ```bash
-git clone <seu-repositorio>
+git clone https://github.com/PhelipeG/test-web-leve-saude.git
 cd test-web-leve-saude
 npm install
 ```
