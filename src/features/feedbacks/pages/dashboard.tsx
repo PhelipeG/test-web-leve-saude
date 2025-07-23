@@ -8,6 +8,7 @@ import { useAuth } from '@/shared/contexts/AuthContext';
 import { useDebounce } from '@/shared/hooks/useDebounce';
 
 import { FeedbackCard } from '../components/feedback-card';
+import { StarsRatingsChart } from '../components/stars-ratings-chart';
 import { useFeedbacks } from '../hooks/useFeedback';
 import { type OrderBy, type OrderDirection } from '../services/feedbackService';
 
@@ -23,12 +24,14 @@ export function DashboardPage() {
   const { feedbacks, loading } = useFeedbacks(orderBy, orderDirection, debounceSearchTerm);
 
   function handleLogout() {
-    signOut(auth).then(() => {
-      toast.success('Logout realizado com sucesso!');
-      navigate('/');
-    }).catch(error => {
-      toast.error('Erro ao fazer logout. Tente novamente.', error.message);
-    });
+    signOut(auth)
+      .then(() => {
+        toast.success('Logout realizado com sucesso!');
+        navigate('/');
+      })
+      .catch(error => {
+        toast.error('Erro ao fazer logout. Tente novamente.', error.message);
+      });
   }
 
   const handleSortChange = (value: string) => {
@@ -74,6 +77,10 @@ export function DashboardPage() {
 
         <p className="text-gray-600 mb-4">Bem-vindo, {user?.email?.slice(0, 11)} 👋</p>
 
+        <div className="mb-6">
+          <StarsRatingsChart />
+        </div>
+
         {/* Busca */}
         <div className="mb-6">
           <label className="block text-sm font-medium text-gray-700 mb-2">Buscar:</label>
@@ -108,9 +115,10 @@ export function DashboardPage() {
         ) : (
           <div className="space-y-4">
             <p className="text-sm text-gray-600">
-              {feedbacks.length} feedback{feedbacks.length !== 1 ? 's' : ''} encontrado{feedbacks.length !== 1 ? 's' : ''}
+              {feedbacks.length} feedback{feedbacks.length !== 1 ? 's' : ''} encontrado
+              {feedbacks.length !== 1 ? 's' : ''}
             </p>
-            <div className="grid gap-4">
+            <div className="grid w-full gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
               {feedbacks.map(fb => (
                 <FeedbackCard key={fb.id} {...fb} />
               ))}

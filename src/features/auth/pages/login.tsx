@@ -1,4 +1,4 @@
-import logo from '@/assets/logo-main.webp'; // Adjust the path as necessary
+import logo from '@/assets/logo-main.webp';
 
 import { LoginForm } from '../components/login-form';
 

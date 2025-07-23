@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-interface DebounceProps{
+interface DebounceProps {
   value: string;
   delay: number;
 }

@@ -30,7 +30,11 @@ export function LoginForm() {
         required
         className="border rounded p-2 mb-4 w-full"
       />
-      <button type="submit" disabled={loading} className="bg-blue-500 w-full text-white p-2 rounded">
+      <button
+        type="submit"
+        disabled={loading}
+        className="bg-blue-500 w-full text-white p-2 rounded"
+      >
         {loading ? 'Loading...' : 'Login'}
       </button>
       {error && <p className="text-red-500 mt-3">{error}</p>}

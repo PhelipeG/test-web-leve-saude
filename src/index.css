@@ -1,6 +1,20 @@
 @import 'tailwindcss';
 
+/* Tema customizado */
+@theme {
+  --color-primary: #551c4b;
+  --color-background: #ffffff;
+  --color-border: #fea227;
+  --color-text: #111827;
+  --color-gray: #9ca3af;
+  --color-white: #ffffff;
+  --color-error: #dc2626;
+  --color-stars: #fbbf24;
+}
 
 body {
-  @apply bg-gray-200 text-gray-900;
+  @apply bg-background text-text;
+}
+button {
+  @apply bg-primary text-white font-bold py-2 px-4 rounded-sm;
 }
