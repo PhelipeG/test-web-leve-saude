@@ -52,6 +52,8 @@ A aplicação estará disponível em: `http://localhost:5173`
 
 ## 🔑 Credenciais de Teste
 
+> ⚠️ **Aviso:** As credenciais de teste estão disponíveis neste projeto apenas para facilitar a avaliação e demonstração da aplicação. Não utilize essas credenciais em produção ou para dados sensíveis.
+
 Para testar a aplicação, você pode criar uma conta ou usar:
 
 - **Email:** [Criar conta no app]
