@@ -1,5 +1,7 @@
 # FeedbackHub - Web Admin
 
+[🔗 Acesse a aplicação online (Vercel)](https://test-web-leve-saude-two.vercel.app)
+
 Aplicação React para administração e visualização de feedbacks.
 
 ## 🚀 Tecnologias
@@ -29,6 +31,7 @@ Aplicação React para administração e visualização de feedbacks.
 ## ⚡ Instalação e Uso
 
 ### 1. Clone e instale dependências
+
 ```bash
 git clone https://github.com/PhelipeG/test-web-leve-saude.git
 cd test-web-leve-saude
@@ -36,17 +39,21 @@ npm install
 ```
 
 ### 2. Configure o Firebase
+
 O arquivo `src/config/firebase.ts` já está configurado com as credenciais do projeto.
 
 ### 3. Execute o projeto
+
 ```bash
 npm run dev
 ```
+
 A aplicação estará disponível em: `http://localhost:5173`
 
 ## 🔑 Credenciais de Teste
 
 Para testar a aplicação, você pode criar uma conta ou usar:
+
 - **Email:** [Criar conta no app]
 - **Senha:** [Criar conta no app]
 
